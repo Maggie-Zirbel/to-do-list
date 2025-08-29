@@ -10,10 +10,14 @@ def add_task(task):
 # Step 3: View tasks
 def view_tasks():
     print("Showing tasks...")
-    for i, tasks in enumerate(tasks, start=1):
-        print(f"{i}".{task})
+    for i, task in enumerate(tasks, start=1):
+        print(f"{i}.{task}")
 # Step 4: Delete a task
-
+def delete_task(task):
+    for i in tasks:
+        if i == task:
+            tasks.remove(task)
+    return print(tasks)
 
 # Step 5: Mark task complete
 
@@ -26,6 +30,7 @@ if __name__ == "__main__":
     add_task("Finish Cyber 201 assignment")
     add_task("Push code to GitHub")
     view_tasks()
+    delete_task("Push code to GitHub")
     # mark_complete(0)
     # view_tasks()
     # save_tasks(t)
